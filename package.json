@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@react-navigation/stack": "^7.1.1",
+    "react-redux": "^9.2.0"
+  }
+}

@@ -1,0 +1,21 @@
+version: '3.7'
+name: myproject
+
+services:      
+  react_native_app:
+    container_name: react_native_app
+    build:
+      context: ./react_native_app
+      args:
+        - NODE_ENV=development
+        - IP_ADDRESS=$IP_ADDRESS
+    env_file:
+      - .env
+    tty: true
+    ports:
+      - '8081:8081'
+    volumes:
+      - native_app-data:/opt/my-app/app/node_modules
+
+volumes:
+  native_app-data:
